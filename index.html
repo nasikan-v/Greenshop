@@ -15,67 +15,71 @@
 
 <body>
     <header></header>
-    <main>
-        <section>
-            <div class="container">
-                <h1>Git commands</h1>
+    <main class="container">
+        <h1>Git commands</h1>
 
-                <img src="./assets/slowpoke.webp" alt="Slowpoke">
+        <img src="./assets/slowpoke.webp" alt="Slowpoke">
 
-                <div class="codebox">
-                    <h2>Setup once</h2>
-                    <ul>
-                        <li><b>git config --global user.name "Your Name"</b> # set username</li>
-                        <li><b>git config --global user.email "you@email.com"</b> # set user email</li>
-                    </ul>
-                </div>
-                <br>
+        <div class="codebox">
+            <h2>Setup once</h2>
+            <ul>
+                <li><code>git config --global user.name "Your Name"</code><span class="comment"># set
+                        username</span></li>
+                <li><code>git config --global user.email "you@email.com"</code><span class="comment"># set user
+                        email</span></li>
+            </ul>
+        </div>
 
-                <div class="codebox">
-                    <h2>“What’s going on?” commands</h2>
-                    <ul>
-                        <li><b>git status</b> # what branch you’re on, what files changed</li>
-                        <li><b>git log</b> # shows commit history (who, when, message, id)</li>
-                        <li><b>git log --oneline --graph --decorate --all</b> # shows a clean “tree” of commits and
-                            branches
-                        </li>
-                    </ul>
-                </div>
-                <br>
+        <div class="codebox">
+            <h2>“What’s going on?” commands</h2>
+            <ul>
+                <li><code>git status</code><span class="comment"># what branch you’re on, what files
+                        changed</span></li>
+                <li><code>git log</code><span class="comment"># shows commit history (who, when, message,
+                        id)</span></li>
+                <li><code>git log --oneline --graph --decorate --all</code><span class="comment"># shows a
+                        clean “tree” of commits
+                        and branches</span></li>
+            </ul>
+        </div>
 
-                <div class="codebox">
-                    <h2>Save work (the core loop)</h2>
-                    <ul>
-                        <li><b>git add .</b> # stage everything in this folder</li>
-                        <li><b>git commit -m "message"</b> # save a snapshot with a message</li>
-                    </ul>
-                </div>
-                <br>
+        <div class="codebox">
+            <h2>Save work (the core loop)</h2>
+            <ul>
+                <li><code>git add .</code><span class="comment"># stage everything in this folder</span></li>
+                <li><code>git commit -m "message"</code><span class="comment"># save a snapshot with a
+                        message</span></li>
+            </ul>
+        </div>
 
-                <div class="codebox">
-                    <h2>Branch commands</h2>
-                    <ul>
-                        <li><b>git branch</b> # lists your local branches. the one with * is the current branch.</li>
-                        <li><b>git checkout/switch branch-name</b> # moves you to another branch</li>
-                        <li><b>git checkout/switch -c new-branch-name</b> # create a new branch and switch to it</li>
-                        <li><b>git branch -d branch-name</b> # deletes only if Git thinks it’s safe (merged)</li>
-                    </ul>
-                </div>
-                <br>
+        <div class="codebox">
+            <h2>Branch commands</h2>
+            <ul>
+                <li><code>git branch</code><span class="comment"># lists your local branches. the one with * is
+                        the current branch.</span></li>
+                <li><code>git checkout/switch branch-name</code><span class="comment"># moves you to another
+                        branch</span></li>
+                <li><code>git checkout/switch -c new-branch-name</code><span class="comment"># create a new
+                        branch and switch to it</span>
+                </li>
+                <li><code>git branch -d branch-name</code><span class="comment"># deletes only if Git thinks
+                        it’s safe (merged)</span></li>
+            </ul>
+        </div>
 
-                <div class="codebox">
-                    <h2>Remote commands (GitHub)</h2>
-                    <ul>
-                        <li><b>git remote -v</b> # shows where your repo pushes/pulls from (the GitHub URL)</li>
-                        <li><b>git pull</b> # brings the latest changes from GitHub into your current branch.</li>
-                        <li><b>git push</b> # uploads your commits to GitHub for your current branch</li>
-                        <li><b>git push -u origin branch-name</b> # first push for a new branch. sets “upstream” so
-                            later
-                            you can just do git push and git pull.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        <div class="codebox">
+            <h2>Remote commands (GitHub)</h2>
+            <ul>
+                <li><code>git remote -v</code><span class="comment"># shows where your repo pushes/pulls from
+                        (the GitHub URL)</span></li>
+                <li><code>git pull</code><span class="comment"># brings the latest changes from GitHub into
+                        your current branch.</span></li>
+                <li><code>git push</code><span class="comment"># uploads your commits to GitHub for your
+                        current branch</span></li>
+                <li><code>git push -u origin branch-name</code><span class="comment"># first push for a new
+                        branch. sets “upstream” so later you can just do git push and git pull.</span></li>
+            </ul>
+        </div>
     </main>
     <footer></footer>
 </body>
