@@ -6,22 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homework template</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header></header>
     <main>
         <section>
-            <h1>Homework template</h1>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <img src="./assets/slowpoke.webp" alt="Slowpoke" width="500">
-            <ul>
-                <li><b>git status</b> - показує стан нового репозиторія</li>
-                <li><b>git add</b> - </li>
-                <li><b>git commit</b> - </li>
-                <li><b>git push origin HEAD</b> - </li>
-                <li><b>git pull</b> - </li>
-            </ul>
+            <div class="container">
+                <h1>Git commands</h1>
+
+                <img src="./assets/slowpoke.webp" alt="Slowpoke">
+
+                <div class="codebox">
+                    <h2>Setup once</h2>
+                    <ul>
+                        <li><b>git config --global user.name "Your Name"</b> # set username</li>
+                        <li><b>git config --global user.email "you@email.com"</b> # set user email</li>
+                    </ul>
+                </div>
+                <br>
+
+                <div class="codebox">
+                    <h2>“What’s going on?” commands</h2>
+                    <ul>
+                        <li><b>git status</b> # what branch you’re on, what files changed</li>
+                        <li><b>git log</b> # shows commit history (who, when, message, id)</li>
+                        <li><b>git log --oneline --graph --decorate --all</b> # shows a clean “tree” of commits and
+                            branches
+                        </li>
+                    </ul>
+                </div>
+                <br>
+
+                <div class="codebox">
+                    <h2>Save work (the core loop)</h2>
+                    <ul>
+                        <li><b>git add .</b> # stage everything in this folder</li>
+                        <li><b>git commit -m "message"</b> # save a snapshot with a message</li>
+                    </ul>
+                </div>
+                <br>
+
+                <div class="codebox">
+                    <h2>Branch commands</h2>
+                    <ul>
+                        <li><b>git branch</b> # lists your local branches. the one with * is the current branch.</li>
+                        <li><b>git checkout/switch branch-name</b> # moves you to another branch</li>
+                        <li><b>git checkout/switch -c new-branch-name</b> # create a new branch and switch to it</li>
+                        <li><b>git branch -d branch-name</b> # deletes only if Git thinks it’s safe (merged)</li>
+                    </ul>
+                </div>
+                <br>
+
+                <div class="codebox">
+                    <h2>Remote commands (GitHub)</h2>
+                    <ul>
+                        <li><b>git remote -v</b> # shows where your repo pushes/pulls from (the GitHub URL)</li>
+                        <li><b>git pull</b> # brings the latest changes from GitHub into your current branch.</li>
+                        <li><b>git push</b> # uploads your commits to GitHub for your current branch</li>
+                        <li><b>git push -u origin branch-name</b> # first push for a new branch. sets “upstream” so
+                            later
+                            you can just do git push and git pull.</li>
+                    </ul>
+                </div>
+            </div>
         </section>
     </main>
     <footer></footer>

@@ -9,9 +9,15 @@
     padding: 0;
 }
 
+body {
+    font-family: "Google Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
 img {
     display: block;
     max-width: 100%;
+    margin-top: var(--basic-space);
+    margin-bottom: var(--basic-space);
 }
 
 .container {
@@ -20,6 +26,27 @@ img {
     max-width: calc(var(--container-size) + (var(--basic-space) * 2));
     margin-left: auto;
     margin-right: auto;
+    margin-top: var(--basic-space);
+    margin-bottom: var(--basic-space);
     padding-left: var(--basic-space);
     padding-right: var(--basic-space);
+}
+
+ul {
+    padding-left: var(--basic-space);
+}
+
+h2 {
+    font-size: 1.2rem;
+
+}
+
+.codebox {
+    padding: var(--basic-space);
+
+    background: #f6f8fa;
+    border: 1px solid #d0d7de;
+    border-radius: 0.8rem;
+    font-size: 14px;
+    line-height: 1.5;
 }
