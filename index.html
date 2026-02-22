@@ -2,40 +2,72 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework template</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <header></header>
-    <main>
-        <section>
-            <div class="container">
-                <h1>Homework template</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor officiis harum laboriosam iste
-                    aliquid molestiae debitis beatae aliquam corrupti, eum et accusantium quisquam sapiente consequuntur
-                    ratione ea facere aspernatur id architecto deleniti, totam quia mollitia! Aliquid beatae aspernatur
-                    omnis, dignissimos dolorum, tempora corrupti laboriosam voluptatem id mollitia corporis! Hic
-                    praesentium ea ullam repellat suscipit illo ipsa commodi laboriosam nihil? Adipisci, laboriosam
-                    debitis vitae necessitatibus quo architecto enim ea et nihil voluptatem similique fugiat officiis,
-                    saepe rem placeat neque soluta, earum aperiam nobis dignissimos facilis iure autem quisquam
-                    asperiores. Aliquid ex asperiores ea vero vel modi commodi ratione quos recusandae cupiditate
-                    suscipit id corporis culpa, voluptatem fugiat maiores perspiciatis tenetur distinctio dignissimos
-                    libero molestias, a, unde ullam voluptate? Modi vel culpa dicta quisquam, voluptate quia. Expedita
-                    reiciendis doloribus praesentium neque suscipit culpa rerum tenetur, maxime vero voluptate
-                    temporibus dicta alias, commodi deleniti totam consectetur magni nesciunt eum, cum labore recusandae
-                    debitis? Aspernatur iure harum id odit explicabo praesentium, mollitia veritatis ipsa dignissimos
-                    dolorem, libero perferendis autem, minima omnis odio suscipit accusantium! Ipsam pariatur alias non
-                    assumenda repudiandae necessitatibus soluta deserunt nesciunt, quae, nemo reprehenderit corporis
-                    fugit, aspernatur temporibus explicabo sit magni quasi. Repellendus quos suscipit aspernatur vero
-                    libero id asperiores ea.</p>
-                <img src="./assets/slowpoke.webp" alt="Slowpoke" width="500">
-            </div>
-        </section>
-    </main>
-    <footer></footer>
+  <!-- Overlay -->
+  <div class="overlay">
+
+    <!-- Modal -->
+    <div class="modal">
+      <button class="close" type="button"><img src="./assets/close.svg" alt="Close button"></button>
+
+      <div class="modal-inner">
+        <!-- Tabs -->
+        <div class="tabs">
+          <button class="tab" type="button">Login</button>
+          <span class="tab-sep">|</span>
+          <button class="tab active" type="button">Register</button>
+        </div>
+
+        <p class="subtitle">Enter your email and password to register.</p>
+
+        <!-- Registration form -->
+        <form class="form">
+
+          <div class="field">
+            <input type="text" name="username" placeholder="Username" required>
+          </div>
+
+          <div class="field">
+            <input type="email" name="email" placeholder="Enter your email address" required>
+          </div>
+
+          <div class="field input-wrap">
+            <input type="password" name="password" placeholder="Password" required>
+            <button class="icon-btn" type="button"><img src="./assets/eye-hidden.svg" alt="Show password"></button>
+          </div>
+
+          <div class="field input-wrap">
+            <input type="password" placeholder="Confirm password" name="confirm-password" required>
+          </div>
+
+          <button class="primary" type="submit">Register</button>
+
+          <div class="divider">
+            <span class="line"></span>
+            <span class="divider-text">Or register with</span>
+            <span class="line"></span>
+          </div>
+
+          <button class="social" type="button">
+            <img src="./assets/google.svg" alt="Google">
+            Continue with Google
+          </button>
+
+          <button class="social" type="button">
+            <img src="./assets/facebook.svg" alt="Facebook">
+            Continue with Facebook
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
 </body>
 
 </html>

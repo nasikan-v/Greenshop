@@ -1,25 +1,244 @@
+/* custom fonts */
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../fonts/CeraPro-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../fonts/CeraPro-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../fonts/CeraPro-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* design tokens */
 :root {
-    --container-size: 1100px;
-    --basic-space: 1rem;
+  --ff-base: "Cera Pro", sans-serif;
+
+  --t-tabs: 500 20px/16px var(--ff-base);
+  --t-body: 400 14px/16px var(--ff-base);
+  --t-caption: 400 13px/16px var(--ff-base);
+  --t-button: 700 16px/16px var(--ff-base);
+  --t-social: 500 13px/16px var(--ff-base);
+
+  --color-fg-default: #3d3d3d;
+  --color-fg-accent: #46a358;
+  --color-fg-muted: #727272;
+  --color-fg-disabled: #a5a5a5;
+  --color-fg-on-accent: #fff;
+
+  --color-bg-default: #fff;
+  --color-bg-accent: #46a358;
+  --color-bg-transparent: transparent;
+  --color-bg-overlay: #0000008c;
+
+  --color-border-default: #eaeaea;
+
+  --radius-control: 5px;
 }
 
+/* base */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
 }
 
-img {
-    display: block;
-    max-width: 100%;
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
 
-.container {
-    position: relative;
-    width: 100%;
-    max-width: calc(var(--container-size) + (var(--basic-space) * 2));
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: var(--basic-space);
-    padding-right: var(--basic-space);
+body {
+  color: var(--color-fg-default);
+}
+
+/* overlay + modal */
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-overlay);
+}
+
+.modal {
+  width: min(500px, 100%);
+  background: var(--color-bg-default);
+  padding: 52px 0;
+  position: relative;
+  border-bottom: 10px solid var(--color-bg-accent);
+}
+
+.modal-inner {
+  width: 300px;
+  max-width: calc(100% - 32px);
+  margin: 0 auto;
+}
+
+/* close button */
+.close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  background: var(--color-bg-transparent);
+  cursor: pointer;
+}
+
+/* tabs */
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font: var(--t-tabs);
+  margin-bottom: 40px;
+}
+
+.tab {
+  border: 0;
+  background: var(--color-bg-transparent);
+  cursor: pointer;
+  padding: 6px 8px;
+}
+
+.tab.active {
+  color: var(--color-fg-accent);
+}
+
+.tab-sep {
+  opacity: 0.5;
+  font: var(--t-body);
+  transform: translateY(1px);
+}
+
+/* subtitle */
+.subtitle {
+  font: var(--t-caption);
+}
+
+/* form layout */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* inputs */
+input,
+button {
+  font: inherit;
+}
+
+.field input {
+  width: 100%;
+  height: 40px;
+  padding: 12px 14px;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-control);
+  font: var(--t-body);
+  outline: none;
+}
+
+.field input::placeholder {
+  color: var(--color-fg-disabled);
+  opacity: 1;
+}
+
+.field input:focus {
+  border-color: var(--color-bg-accent);
+  box-shadow: 0 0 0 1px var(--color-bg-accent);
+}
+
+.field input[type="password"]:not(:placeholder-shown) {
+  font-family: Arial, sans-serif;
+}
+
+/* eye icon inside input */
+.input-wrap {
+  position: relative;
+}
+
+.input-wrap input {
+  padding-right: 52px;
+}
+
+.icon-btn {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: var(--color-bg-transparent);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+/* primary button */
+.primary {
+  margin-top: 24px;
+  padding: 16px 16px 13px;
+  border: 0;
+  border-radius: var(--radius-control);
+  background: var(--color-bg-accent);
+  color: var(--color-bg-default);
+  font: var(--t-button);
+  cursor: pointer;
+}
+
+.primary:active {
+  transform: translateY(1px);
+}
+
+/* divider */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 16px 0;
+  font: var(--t-caption);
+  color: var(--color-fg-default);
+}
+
+.line {
+  height: 1px;
+  background: var(--color-border-default);
+  flex: 1;
+}
+
+.divider-text {
+  white-space: nowrap;
+}
+
+/* social buttons */
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-control);
+  background: var(--color-bg-default);
+  font: var(--t-social);
+  color: var(--color-fg-muted);
+  cursor: pointer;
 }
